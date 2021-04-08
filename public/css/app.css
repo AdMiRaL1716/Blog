@@ -62,7 +62,6 @@ body {
   line-height: 1.6;
   color: #212529;
   text-align: left;
-  background-color: #f8fafc;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -10016,7 +10015,7 @@ h3 {
 }
 
 .navbar .logo {
-    color: #fff;
+    color: #222;
     font-weight: 600;
     font-size: 18px;
 }
@@ -10037,4 +10036,20 @@ h3 {
     overflow: hidden;
     margin: -4px 5px -6px 0;
     position: relative;
+}
+
+.navbar .navbar-nav .nav-link {
+    color: #222 !important;
+}
+
+.navbar .navbar-nav .nav-link:hover {
+    color: #EE3158 !important;
+}
+
+#remember {
+    width: auto;
+}
+
+.form-check-label {
+    margin-top: 2px;
 }

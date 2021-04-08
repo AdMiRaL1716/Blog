@@ -34,7 +34,7 @@
  17 Footer
  18 spacial pages
  19 Responsive
- 
+
 
 ---------------------------------------------------------------- */
 /* ----------------------------------------------------------------
@@ -408,7 +408,7 @@ span, a, a:hover {
   min-height: 70px;
 }
 .navbar .icon-bar {
-  color: #fff;
+  color: #222;
 }
 .navbar .navbar-nav .nav-link {
   font-size: 13px;
@@ -2372,7 +2372,7 @@ span, a, a:hover {
   .navbar .navbar-collapse {
     max-height: 340px;
     overflow: auto;
-    background: #111;
+    background: #fff;
     text-align: left;
     padding: 10px 30px;
   }
@@ -2381,7 +2381,7 @@ span, a, a:hover {
   }
 
   .nav-scroll .navbar-collapse .nav-link {
-    color: #fff !important;
+    color: #222 !important;
   }
   .nav-scroll .navbar-collapse .active {
     color: #EE3158 !important;
@@ -2392,7 +2392,7 @@ span, a, a:hover {
     visibility: visible;
     -webkit-transform: translateY(0);
     transform: translateY(0);
-    background-color: #222;
+    background-color: #fff;
     width: 100%;
     display: none;
   }

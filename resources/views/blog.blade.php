@@ -3,17 +3,7 @@
 <title>Blog</title>
 
 @section('content')
-    <body class="bg-gray">
-    <header class="page-header valign bg-img" data-overlay-dark="8" data-background="img/2.jpg" data-stellar-background-ratio="0.5" style="height: 200px;">
-        <div class="container">
-            <div class="row">
-                <div class="full-width text-center caption mt-30">
-                    <h6><a href="">Blog</a></h6>
-                </div>
-            </div>
-        </div>
-    </header>
-    <section class="blogs section-padding bg-gray main-content">
+    <section class="blogs section-padding main-content">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8">
@@ -75,5 +65,4 @@
             </div>
         </div>
     </section>
-    </body>
 @endsection

@@ -33,19 +33,17 @@
         </div>
         <nav class="navbar navbar-expand-lg">
             <div class="container">
-
-                <!-- Logo -->
                 <a class="logo" href="">
                     MyBlog
                 </a>
-
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="icon-bar"><i class="fas fa-bars"></i></span>
                 </button>
-
-                <!-- navbar links -->
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('home') }}">Home</a>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('blog') }}">Blog</a>
                         </li>
@@ -105,7 +103,6 @@
                 </div>
             </div>
         </nav>
-
         <main>
             @yield('content')
         </main>
@@ -113,18 +110,11 @@
     <script src="{{ asset('js/assets/jquery-3.0.0.min.js') }}" defer></script>
     <script src="{{ asset('js/assets/jquery-migrate-3.0.0.min.js') }}" defer></script>
     <script src="{{ asset('js/assets/popper.min.js') }}" defer></script>
-    <script src="{{ asset('js/assets/bootstrap.min.js') }}" defer></script>
     <script src="{{ asset('js/assets/scrollIt.min.js') }}" defer></script>
     <script src="{{ asset('js/assets/jquery.hover3d.min.js') }}" defer></script>
     <script src="{{ asset('js/assets/jquery.waypoints.min.js') }}" defer></script>
-    <script src="{{ asset('js/assets/jquery.counterup.min.js') }}" defer></script>
-    <script src="{{ asset('js/assets/sticky-kit.min.js') }}" defer></script>
-    <script src="{{ asset('js/assets/owl.carousel.min.js') }}" defer></script>
     <script src="{{ asset('js/assets/jquery.magnific-popup.min.js') }}" defer></script>
     <script src="{{ asset('js/assets/jquery.stellar.min.js') }}" defer></script>
-    <script src="{{ asset('js/assets/isotope.pkgd.min.js') }}" defer></script>
-    <script src="{{ asset('js/assets/YouTubePopUp.jquery.js') }}" defer></script>
-    <script src="{{ asset('js/assets/validator.js') }}" defer></script>
     <script src="{{ asset('js/assets/scripts.js') }}" defer></script>
 </body>
 </html>
