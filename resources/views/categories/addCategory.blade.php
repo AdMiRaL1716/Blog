@@ -3,6 +3,7 @@
 <title>Add Category</title>
 
 @section('content')
+    @if(Auth::user()->id_role == 1)
     <body class="bg-gray">
         <header class="page-header valign bg-img" data-overlay-dark="8" data-background="img/2.jpg" data-stellar-background-ratio="0.5" style="height: 200px;">
             <div class="container">
@@ -56,4 +57,5 @@
             </div>
         </section>
     </body>
+    @endif
 @endsection

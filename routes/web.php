@@ -46,3 +46,7 @@ Route::post('/new-comment', [App\Http\Controllers\CommentController::class, 'cre
 //Search
 Route::get('/search/', [App\Http\Controllers\BlogController::class, 'search'])->name('search');
 Route::get('/searchByTag/', [App\Http\Controllers\BlogController::class, 'searchByTag'])->name('searchByTag');
+
+//Settings
+Route::get('/edit-image', [App\Http\Controllers\SettingsController::class, 'editImage'])->name('edit-image');
+Route::post('/edit-image', [App\Http\Controllers\SettingsController::class, 'editImg'])->name('edit-image');

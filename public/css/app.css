@@ -10029,3 +10029,12 @@ h3 {
     background: none;
     border: none;
 }
+
+.author-menu {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: -4px 5px -6px 0;
+    position: relative;
+}

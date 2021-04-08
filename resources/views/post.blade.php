@@ -34,7 +34,7 @@
                                             <h6><a>{{$post->title}}</a></h6>
                                             <p class="spical">{{$post->description}}</p>
                                             <div class="info">
-                                                <a><span class="author"><img src="{{asset('img/blog/01.png')}}" alt=""></span> {{$user->name}}</a>
+                                                <a><span class="author"><img src="{{asset($user->image)}}" alt=""></span> {{$user->name}}</a>
                                                 <a class="right"><span class="icon"><i class="fas fa-clock"></i></span> {{$post->created_at}}</a>
                                             </div>
                                         </div>
@@ -49,7 +49,7 @@
                                     @if($user->id == $comment->id_user && $comment->id_post == $post->id)
                                     <div class="com">
                                         <div class="img">
-                                            <img src="{{asset('img/blog/01.png')}}" alt="">
+                                            <img src="{{asset($user->image)}}" alt="">
                                         </div>
                                         <div class="cont">
                                             <h6>{{$user->name}}</h6>

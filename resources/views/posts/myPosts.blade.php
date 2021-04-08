@@ -35,25 +35,27 @@
                                 <div class="col-md-4">
                                     <div class="item">
                                         <div class="post-img">
-                                            <div class="img">
-                                                <img src="{{asset($post->cover)}}" alt="">
-                                            </div>
+                                            <a href="post/{{$post->id}}">
+                                                <div class="img">
+                                                    <img src="{{asset($post->cover)}}" alt="">
+                                                </div>
+                                            </a>
                                             <div class="tag tag2">
                                                 <a href="edit-post/{{$post->id}}"><span class="icon"><i class="fas fa-edit"></i></span></a>
                                                 <a href="delete-post/{{$post->id}}"><span class="icon"><i class="fas fa-trash"></i></span></a>
                                             </div>
                                             <div class="tag">
-                                                <a href=""><span class="icon"><i class="fas fa-tags"></i></span> {{$category->name}}</a>
+                                                <a><span class="icon"><i class="fas fa-tags"></i></span> {{$category->name}}</a>
                                             </div>
                                         </div>
                                         <div class="cont">
                                             <h6>
-                                                <a href="">{{Str::limit(strip_tags($post->title), 20)}}</a>
+                                                <a href="post/{{$post->id}}">{{Str::limit(strip_tags($post->title), 20)}}</a>
                                             </h6>
                                             <p>{{ Str::limit(strip_tags($post->description), 40) }}</p>
                                             <div class="info">
-                                                <a href=""><span class="author"><img src="img/blog/01.png" alt=""></span>{{Auth::user()->name}}</a>
-                                                <a href="" class="right"><span class="icon"><i class="fas fa-clock"></i></span>{{$post->created_at}}</a>
+                                                <a><span class="author"><img src="{{asset(Auth::user()->image)}}" alt=""></span>{{Auth::user()->name}}</a>
+                                                <a class="right"><span class="icon"><i class="fas fa-clock"></i></span>{{$post->created_at}}</a>
                                             </div>
                                         </div>
                                     </div>

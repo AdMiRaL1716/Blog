@@ -86,8 +86,11 @@
                                     </ul>
                                 </li>
                             <li class="nav-item dropdown">
-                                <span class="nav-link">{{ Auth::user()->name }} <i class="fas fa-angle-down"></i></span>
+                                <span class="nav-link"><img src="{{asset(Auth::user()->image)}}" class="author-menu">{{ Auth::user()->name }} <i class="fas fa-angle-down"></i></span>
                                 <ul class="dropdown-menu last">
+                                    <li class="dropdown-item">
+                                        <a href="{{route('edit-image')}}">Edit Image</a>
+                                    </li>
                                     <li class="dropdown-item">
                                         <a href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>

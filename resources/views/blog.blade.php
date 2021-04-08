@@ -38,7 +38,7 @@
                                                 <h6><a href="post/{{$post->id}}">{{Str::limit(strip_tags($post->title), 20)}}</a></h6>
                                                 <p>{{ Str::limit(strip_tags($post->description), 40) }}</p>
                                                 <div class="info">
-                                                    <a><span class="author"><img src="img/blog/01.png" alt=""></span>{{$user->name}}</a>
+                                                    <a><span class="author"><img src="{{asset($user->image)}}" alt=""></span>{{$user->name}}</a>
                                                     <a class="right"><span class="icon"><i class="fas fa-clock"></i></span>{{$post->created_at}}</a>
                                                 </div>
                                             </div>
