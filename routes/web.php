@@ -43,6 +43,7 @@ Route::post('/edit-post/{id}', [App\Http\Controllers\PostController::class, 'edi
 Route::get('/blog', [App\Http\Controllers\BlogController::class, 'allPosts'])->name('blog');
 Route::get('/post/{id}', [App\Http\Controllers\BlogController::class, 'onePost'])->name('post/{id}');
 Route::post('/new-comment', [App\Http\Controllers\CommentController::class, 'create'])->name('new-comment');
+Route::post('/delete-comment', [App\Http\Controllers\CommentController::class, 'delete'])->name('delete-comment');
 
 //Search
 Route::get('/search/', [App\Http\Controllers\BlogController::class, 'search'])->name('search');

@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+<title>Register</title>
+
 @section('content')
     <section class="blogs section-padding main-content">
         <div class="container">

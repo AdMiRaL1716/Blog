@@ -45,7 +45,22 @@
                                             <h6>{{$user->name}}</h6>
                                             <span>{{$comment->created_at}}</span>
                                             <p>{{$comment->comment}}</p>
-                                            <!--<a class="reply" href="#0">Reply</a>-->
+                                            @if(Auth::user() && Auth::user()->id_role == 1)
+                                                <form method="POST" action="{{ route('delete-comment') }}">
+                                                    @csrf
+                                                    <input type="text" value="{{$comment->id_post}}" name="id_post" readonly required hidden>
+                                                    <input type="text" value="{{$comment->id}}" name="id_comment" readonly required hidden>
+                                                    <button type="submit" class="reply delete-comment">Delete</button>
+                                                </form>
+                                            @endif
+                                            @if(Auth::user() && Auth::user()->id == $user->id && Auth::user()->id_role != 1)
+                                                <form method="POST" action="{{ route('delete-comment') }}">
+                                                    @csrf
+                                                    <input type="text" value="{{$comment->id_post}}" name="id_post" readonly required hidden>
+                                                    <input type="text" value="{{$comment->id}}" name="id_comment" readonly required hidden>
+                                                    <button type="submit" class="reply delete-comment">Delete</button>
+                                                </form>
+                                            @endif
                                         </div>
                                     </div>
                                     @endif

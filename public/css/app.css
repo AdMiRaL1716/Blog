@@ -10053,3 +10053,8 @@ h3 {
 .form-check-label {
     margin-top: 2px;
 }
+
+.delete-comment {
+    background: none;
+    border: none;
+}

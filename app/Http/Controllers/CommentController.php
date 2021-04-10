@@ -46,4 +46,16 @@ class CommentController extends Controller
             }
         }
     }
+
+    public function delete(Request $request) {
+        $data = $request->input();
+        $commment = Comment::find($data['id_comment']);
+        try {
+            $commment->delete();
+            return redirect('post/'.$data['id_post']);
+        }
+        catch(Exception $e){
+            return redirect('post/'.$data['id_post']);
+        }
+    }
 }

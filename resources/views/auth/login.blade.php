@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+<title>Login</title>
+
 @section('content')
     <section class="blogs section-padding main-content">
     <div class="container">
