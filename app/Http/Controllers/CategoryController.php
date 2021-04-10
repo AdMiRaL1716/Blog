@@ -3,11 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Comment;
+use App\Models\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use App\Traits\UploadTrait;
 
 class CategoryController extends Controller
 {
+    use UploadTrait;
     /**
      * Create a new controller instance.
      *
@@ -92,7 +96,17 @@ class CategoryController extends Controller
     public function delete($id) {
         $category = Category::find($id);
         try {
-            $category->delete();
+            $posts = Post::query()->where('id_category', $id)->get();
+            if (count($posts) != 0) {
+                foreach ($posts as $post) {
+                    $this->deleteOne('public', $post->cover);
+                    $comments = Comment::query()->where('id_post', $post->id)->delete();
+                    $post = Post::query()->where('id_category', $id)->delete();
+                    $category->delete();
+                }
+            } else {
+                $category->delete();
+            }
             return redirect('categories')->with('status',"Delete successfully");
         }
         catch(Exception $e){

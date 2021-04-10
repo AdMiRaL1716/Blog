@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use App\Models\Post;
+use App\Models\Comment;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use App\Traits\UploadTrait;
@@ -131,6 +132,9 @@ class PostController extends Controller
     public function delete($id) {
         $post = Post::find($id);
         try {
+            $comments = Comment::query()
+                ->where('id_post', $post->id)
+                ->delete();
             $this->deleteOne('public', $post->cover);
             $post->delete();
             return redirect('myposts')->with('status',"Delete successfully");
