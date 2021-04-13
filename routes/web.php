@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Artisan;
 
 /*
 |--------------------------------------------------------------------------
@@ -52,3 +53,7 @@ Route::get('/searchByTag/', [App\Http\Controllers\BlogController::class, 'search
 //Settings
 Route::get('/edit-image', [App\Http\Controllers\SettingsController::class, 'editImage'])->name('edit-image');
 Route::post('/edit-image', [App\Http\Controllers\SettingsController::class, 'editImg'])->name('edit-image');
+
+Route::get('/migrations', function () {
+    Artisan::call('migrate');
+});
